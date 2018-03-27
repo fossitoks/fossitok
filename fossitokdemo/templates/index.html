@@ -2,49 +2,196 @@
 <html>
   
 <!-- Mirrored from html.creaws.com/suntour/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 26 Mar 2018 18:40:57 GMT -->
-<head>
-    <title>Suntour</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/font-awesome.css">
-    <link rel="stylesheet" href="css/owl.carousel.css">
-    <link rel="stylesheet" href="css/jquery.fancybox.css">
-    <link rel="stylesheet" href="fonts/fi/flaticon.css">
-    <link rel="stylesheet" href="css/flexslider.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/indent.css">
-    <link rel="stylesheet" href="rs-plugin/css/settings.css">
-    <link rel="stylesheet" href="rs-plugin/css/layers.css">
-    <link rel="stylesheet" href="rs-plugin/css/navigation.css">
-    <link rel="stylesheet" href="tuner/css/colorpicker.css">
-    <link rel="stylesheet" href="tuner/css/styles.css">
-  </head>
-  <body>
+  {% include 'blocks/css_refrences.html' %}
+
+  <body ng-app="fossDemoApp" ng-controller="homeController">
   
     <!-- header page-->
-    <header-directive/>
+    <header>
+      <!-- site top panel-->
+      <div class="site-top-panel">
+        <div class="container p-relative">
+          <div class="row">
+            <div class="col-md-6 col-sm-7">
+              <!-- lang select wrapper-->
+              <div class="top-left-wrap font-3">
+                <div class="mail-top"><a href="http://html.creaws.com/cdn-cgi/l/email-protection#a7d4d2d7d7c8d5d389d4d2c9d3c8d2d5e7c2dfc6cad7cbc289c4c8ca"> <i class="flaticon-suntour-email"></i><span class="__cf_email__" data-cfemail="96e5e3f8e2f9e3e4d6f3eef7fbe6faf3b8f5f9fb">[email&#160;protected]</span></a></div><span>/</span>
+                <div class="tel-top"><a href="tel:(723)-700-1183"> <i class="flaticon-suntour-phone"></i>(723)-700-1183</a></div>
+              </div>
+              <!-- ! lang select wrapper-->
+            </div>
+            <div class="col-md-6 col-sm-5 text-right">
+              <div class="top-right-wrap">
+                <div class="top-login"><a href="#">My Account</a></div>
+                <div class="curr-wrap dropdown">
+                  <div>
+                    <ul>
+                      <li><a href="#" class="lang-sel icl-en">Currency<i class="fa fa-angle-down"></i></a>
+                        <ul>
+                          <li><a href="#">USD</a></li>
+                          <li><a href="#">EUR</a></li>
+                          <li> <a href="#">GBP</a></li>
+                          <li> <a href="#">AUD</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="lang-wrap dropdown">
+                  <div>
+                    <ul>
+                      <li><a href="#" class="lang-sel icl-en">Language <i class="fa fa-angle-down"></i></a>
+                        <ul>
+                          <li><a href="#">English</a></li>
+                          <li> <a href="#">Deutsch</a></li>
+                          <li> <a href="#">Espanol</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ! site top panel-->
+      <!-- Navigation panel-->
+      <nav class="main-nav js-stick">
+        <div class="full-wrapper relative clearfix container">
+          <!-- Logo ( * your text or image into link tag *)-->
+          <div class="nav-logo-wrap local-scroll"><a href="index.html" class="logo"><img src="/static/fossitokdemo/img/logo.png" data-at2x="/static/fossitokdemo/img/logo.png" alt></a></div>
+          <!-- Main Menu-->
+          <div class="inner-nav desktop-nav">
+            <ul class="clearlist">
+              <!-- Item With Sub-->
+              <li><a href="index.html" class="mn-has-sub active">Home <i class="fa fa-angle-down button_open"></i></a>
+                <ul class="mn-sub">
+                  <li class="active"><a href="index.html">Standart Slider</a></li>
+                  <li><a href="index-search.html">Main Search</a></li>
+                  <li><a href="index-slider.html">Full Slider</a></li>
+                  <li><a href="index-video.html">Video Slider</a></li>
+                </ul>
+              </li>
+              <!-- End Item With Sub-->
+              <li class="slash">/</li>
+              <!-- Item With Sub-->
+              <li><a href="hotels-search.html" class="mn-has-sub">Hotels <i class="fa fa-angle-down button_open"></i></a>
+                <!-- Sub-->
+                <ul class="mn-sub">
+                  <li><a href="hotels-list.html">Hotels list</a></li>
+                  <li><a href="hotels-search.html">Hotels search</a></li>
+                  <li><a href="hotels-details.html">Hotels details</a></li>
+                </ul>
+                <!-- End Sub-->
+              </li>
+              <!-- End Item With Sub-->
+              <li class="slash">/</li>
+              <!-- Item With Sub-->
+              <li class="megamenu"><a href="page-about-us.html" class="mn-has-sub">Pages <i class="fa fa-angle-down button_open"></i></a>
+                <!-- Sub-->
+                <ul class="mn-sub mn-has-multi">
+                  <li class="mn-sub-multi"><a class="mn-group-title">Pages</a>
+                    <ul>
+                      <li><a href="page-about-us.html">About Us</a></li>
+                      <li><a href="page-services.html">Services</a></li>
+                      <li><a href="page-procces.html">Our Procces</a></li>
+                      <li><a href="page-our-team.html">Our Team</a></li>
+                      <li><a href="page-profile.html">Profile</a></li>
+                      <li><a href="page-elements.html">Elements</a></li>
+                    </ul>
+                  </li>
+                  <li class="mn-sub-multi"><a class="mn-group-title">Portfolio</a>
+                    <ul>
+                      <li><a href="portfolio-3-col.html">Three Columns</a></li>
+                      <li><a href="portfolio-4-col.html">Four Columns</a></li>
+                      <li><a href="portfolio-masonry.html">Portfolio Masonry</a></li>
+                      <li><a href="portfolio-with-sidebar.html">With Sidebar</a></li>
+                      <li><a href="portfolio-gallery.html">Gallery</a></li>
+                      <li><a href="page-portfolio-single.html">Portfolio Single</a></li>
+                    </ul>
+                  </li>
+                  <li class="mn-sub-multi"><a class="mn-group-title">Blog</a>
+                    <ul>
+                      <li><a href="blog-2-col-sidebar.html">Two Columns + Sidebar</a></li>
+                      <li><a href="blog-3-col.html">Three Columns</a></li>
+                      <li><a href="blog-4-col.html">Four Columns</a></li>
+                      <li><a href="blog-single.html">Blog Single</a></li>
+                      <li><a href="blog-grid.html">Blog Grid</a></li>
+                      <li><a href="blog-list.html">Blog List</a></li>
+                    </ul>
+                  </li>
+                </ul>
+                <!-- End Sub-->
+              </li>
+              <!-- End Item With Sub-->
+              <!-- span /-->
+              <!-- Item With Sub-->
+              <!-- End Item With Sub-->
+              <li class="slash">/</li>
+              <!-- Item With Sub-->
+              <li><a href="shop-grid.html" class="mn-has-sub">Shop <i class="fa fa-angle-down button_open"></i></a>
+                <!-- Sub-->
+                <ul class="mn-sub">
+                  <li><a href="shop-grid.html">Shop Grid</a></li>
+                  <li><a href="shop-cart.html">Shop Cart</a></li>
+                  <li><a href="shop-checkout.html">Shop Checkout</a></li>
+                  <li><a href="shop-single.html">Shop Single Product</a></li>
+                </ul>
+                <!-- End Sub-->
+              </li>
+              <!-- End Item With Sub-->
+              <li class="slash">/</li>
+              <!-- Item-->
+              <li><a href="page-contact.html">Contact</a></li>
+              <!-- End Item-->
+              <!-- Search-->
+              <li class="search"><a href="#" class="mn-has-sub">Search</a>
+                <ul class="search-sub">
+                  <li>
+                    <div class="container">
+                      <div class="mn-wrap">
+                        <form method="post" class="form">
+                          <div class="search-wrap">
+                            <input type="text" placeholder="Where will you go next?" class="form-control search-field"><i class="flaticon-suntour-search search-icon"></i>
+                          </div>
+                        </form>
+                      </div>
+                      <div class="close-button"><span>Search</span></div>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <!-- End Search-->
+            </ul>
+          </div>
+          <!-- End Main Menu-->
+        </div>
+      </nav>
+      <!-- End Navigation panel-->
+    </header>
     <!-- ! header page-->
+
+
     <div class="content-body">
       <div class="tp-banner-container">
         <div class="tp-banner-slider">
           <ul>
-            <li data-masterspeed="700" data-slotamount="7" data-transition="fade"><img src="rs-plugin/assets/loader.gif" data-lazyload="pic/slider/main/slide-1.jpg" data-bgposition="center" alt="" data-kenburns="on" data-duration="30000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="120" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 0" data-offsetend="0 0" data-bgparallax="10">
+            <li data-masterspeed="700" data-slotamount="7" data-transition="fade"><img src="/static/fossitokdemo/rs-plugin/assets/loader.gif"data-lazyload="/static/fossitokdemo/pic/slider/main/slide-1.jpg" data-bgposition="center" alt="" data-kenburns="on" data-duration="30000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="120" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 0" data-offsetend="0 0" data-bgparallax="10">
               <div data-x="['center','center','center','center']" data-y="center" data-transform_in="x:-150px;opacity:0;s:1500;e:Power3.easeInOut;" data-transform_out="x:150px;opacity:0;s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-start="400" class="tp-caption sl-content">
                 <div class="sl-title-top">Welcome to</div>
                 <div class="sl-title">Honolulu</div>
                 <div class="sl-title-bot">Starting <span>$105</span> per night</div>
               </div>
             </li>
-            <li data-masterspeed="700" data-transition="fade"><img src="rs-plugin/assets/loader.gif" data-lazyload="pic/slider/main/slide-2.jpg" data-bgposition="center" alt="" data-kenburns="on" data-duration="30000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="120" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 0" data-offsetend="0 0" data-bgparallax="10">
+            <li data-masterspeed="700" data-transition="fade"><img src="/static/fossitokdemo/rs-plugin/assets/loader.gif"data-lazyload="/static/fossitokdemo/pic/slider/main/slide-2.jpg" data-bgposition="center" alt="" data-kenburns="on" data-duration="30000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="120" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 0" data-offsetend="0 0" data-bgparallax="10">
               <div data-x="['center','center','center','center']" data-y="center" data-transform_in="y:-150px;opacity:0;s:1500;e:Power3.easeInOut;" data-transform_out="y:150px;opacity:0;s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-start="400" class="tp-caption sl-content">
                 <div class="sl-title-top">Welcome to</div>
                 <div class="sl-title">Istanbul</div>
                 <div class="sl-title-bot">Starting <span>$255</span> per night</div>
               </div>
             </li>
-            <li data-masterspeed="700" data-transition="fade"><img src="rs-plugin/assets/loader.gif" data-lazyload="pic/slider/main/slide-3.jpg" data-bgposition="center" alt="" data-kenburns="on" data-duration="30000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="120" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 0" data-offsetend="0 0" data-bgparallax="10">
+            <li data-masterspeed="700" data-transition="fade"><img src="/static/fossitokdemo/rs-plugin/assets/loader.gif"data-lazyload="/static/fossitokdemo/pic/slider/main/slide-3.jpg" data-bgposition="center" alt="" data-kenburns="on" data-duration="30000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="120" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 0" data-offsetend="0 0" data-bgparallax="10">
               <div data-x="['center','center','center','center']" data-y="center" data-transform_in="x:150px;opacity:0;s:1500;e:Power3.easeInOut;" data-transform_out="x:-150px;opacity:0;s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-start="400" class="tp-caption sl-content">
                 <div class="sl-title-top">Welcome to</div>
                 <div class="sl-title">Dubai</div>
@@ -57,7 +204,7 @@
         <div class="slider-info-wrap clearfix">
           <div class="slider-info-content">
             <div class="slider-info-item">
-              <div class="info-item-media"><img src="pic/slider-info-1.jpg" data-at2x="pic/slider-info-1.jpg" alt>
+              <div class="info-item-media"><img src="/static/fossitokdemo/pic/slider-info-1.jpg" data-at2x="/static/fossitokdemo/pic/slider-info-1.jpg" alt>
                 <div class="info-item-text">
                   <div class="info-price font-4"><span>start per night</span> $105</div>
                   <div class="info-temp font-4"><span>local temperature</span> 36° / 96.8°</div>
@@ -72,7 +219,7 @@
               </div>
             </div>
             <div class="slider-info-item">
-              <div class="info-item-media"><img src="pic/slider-info-2.jpg" data-at2x="pic/slider-info-2.jpg" alt>
+              <div class="info-item-media"><img src="/static/fossitokdemo/pic/slider-info-2.jpg" data-at2x="/static/fossitokdemo/pic/slider-info-2.jpg" alt>
                 <div class="info-item-text">
                   <div class="info-price font-4"><span>start per night</span> $55</div>
                   <div class="info-temp font-4"><span>local temperature</span> 31° / 87.8°</div>
@@ -87,7 +234,7 @@
               </div>
             </div>
             <div class="slider-info-item">
-              <div class="info-item-media"><img src="pic/slider-info-3.jpg" data-at2x="pic/slider-info-3.jpg" alt>
+              <div class="info-item-media"><img src="/static/fossitokdemo/pic/slider-info-3.jpg" data-at2x="/static/fossitokdemo/pic/slider-info-3.jpg" alt>
                 <div class="info-item-text">
                   <div class="info-price font-4"><span>start per night</span> $95</div>
                   <div class="info-temp font-4"><span>local temperature</span> 41° / 105.8°</div>
@@ -102,7 +249,7 @@
               </div>
             </div>
             <div class="slider-info-item">
-              <div class="info-item-media"><img src="pic/slider-info-4.jpg" data-at2x="pic/slider-info-4.jpg" alt>
+              <div class="info-item-media"><img src="/static/fossitokdemo/pic/slider-info-4.jpg" data-at2x="/static/fossitokdemo/pic/slider-info-4.jpg" alt>
                 <div class="info-item-text">
                   <div class="info-price font-4"><span>start per night</span> $80</div>
                   <div class="info-temp font-4"><span>local temperature</span> 25° / 77°</div>
@@ -130,13 +277,13 @@
               <div class="cws_divider mb-25 mt-5"></div>
               <p>Nullam ac dolor id nulla finibus pharetra. Sed sed placerat mauris. Pellentesque lacinia imperdiet interdum. Ut nec nulla in purus consequat lobortis. Mauris lobortis a nibh sed convallis.</p>
             </div>
-            <div class="col-md-4"><img src="pic/promo-1.png" data-at2x="pic/promo-1.png" alt class="mt-md-0 mt-minus-70"></div>
+            <div class="col-md-4"><img src="/static/fossitokdemo/pic/promo-1.png" data-at2x="/static/fossitokdemo/pic/promo-1.png" alt class="mt-md-0 mt-minus-70"></div>
           </div>
         </div>
         <div class="features-tours-full-width">
           <div class="features-tours-wrap clearfix">
             <div class="features-tours-item">
-              <div class="features-media"><img src="pic/tours/1.jpg" data-at2x="pic/tours/1.jpg" alt>
+              <div class="features-media"><img src="/static/fossitokdemo/pic/tours/1.jpg" data-at2x="/static/fossitokdemo/pic/tours/1.jpg" alt>
                 <div class="features-info-top">
                   <div class="info-price font-4"><span>start per night</span> $80</div>
                   <div class="info-temp font-4"><span>local temperature</span> 30° / 86°</div>
@@ -148,7 +295,7 @@
               </div>
             </div>
             <div class="features-tours-item">
-              <div class="features-media"><img src="pic/tours/2.jpg" data-at2x="pic/tours/2.jpg" alt>
+              <div class="features-media"><img src="/static/fossitokdemo/pic/tours/2.jpg" data-at2x="/static/fossitokdemo/pic/tours/2.jpg" alt>
                 <div class="features-info-top">
                   <div class="info-price font-4"><span>start per night</span> $100</div>
                   <div class="info-temp font-4"><span>local temperature</span> 23° / 73.4°</div>
@@ -160,7 +307,7 @@
               </div>
             </div>
             <div class="features-tours-item">
-              <div class="features-media"><img src="pic/tours/3.jpg" data-at2x="pic/tours/3.jpg" alt>
+              <div class="features-media"><img src="/static/fossitokdemo/pic/tours/3.jpg" data-at2x="/static/fossitokdemo/pic/tours/3.jpg" alt>
                 <div class="features-info-top">
                   <div class="info-price font-4"><span>start per night</span> $120</div>
                   <div class="info-temp font-4"><span>local temperature</span> 34° / 93.2°</div>
@@ -172,7 +319,7 @@
               </div>
             </div>
             <div class="features-tours-item">
-              <div class="features-media"><img src="pic/tours/4.jpg" data-at2x="pic/tours/4.jpg" alt>
+              <div class="features-media"><img src="/static/fossitokdemo/pic/tours/4.jpg" data-at2x="/static/fossitokdemo/pic/tours/4.jpg" alt>
                 <div class="features-info-top">
                   <div class="info-price font-4"><span>start per night</span> $105</div>
                   <div class="info-temp font-4"><span>local temperature</span> 39° / 102.2°</div>
@@ -184,7 +331,7 @@
               </div>
             </div>
             <div class="features-tours-item">
-              <div class="features-media"><img src="pic/tours/5.jpg" data-at2x="pic/tours/5.jpg" alt>
+              <div class="features-media"><img src="/static/fossitokdemo/pic/tours/5.jpg" data-at2x="/static/fossitokdemo/pic/tours/5.jpg" alt>
                 <div class="features-info-top">
                   <div class="info-price font-4"><span>start per night</span> $110</div>
                   <div class="info-temp font-4"><span>local temperature</span> 35° / 95°</div>
@@ -196,7 +343,7 @@
               </div>
             </div>
             <div class="features-tours-item">
-              <div class="features-media"><img src="pic/tours/6.jpg" data-at2x="pic/tours/6.jpg" alt>
+              <div class="features-media"><img src="/static/fossitokdemo/pic/tours/6.jpg" data-at2x="/static/fossitokdemo/pic/tours/6.jpg" alt>
                 <div class="features-info-top">
                   <div class="info-price font-4"><span>start per night</span> $85</div>
                   <div class="info-temp font-4"><span>local temperature</span> 30° / 86°</div>
@@ -208,7 +355,7 @@
               </div>
             </div>
             <div class="features-tours-item">
-              <div class="features-media"><img src="pic/tours/7.jpg" data-at2x="pic/tours/7.jpg" alt>
+              <div class="features-media"><img src="/static/fossitokdemo/pic/tours/7.jpg" data-at2x="/static/fossitokdemo/pic/tours/7.jpg" alt>
                 <div class="features-info-top">
                   <div class="info-price font-4"><span>start per night</span> $75</div>
                   <div class="info-temp font-4"><span>local temperature</span> 25° / 77°</div>
@@ -220,7 +367,7 @@
               </div>
             </div>
             <div class="features-tours-item">
-              <div class="features-media"><img src="pic/tours/8.jpg" data-at2x="pic/tours/8.jpg" alt>
+              <div class="features-media"><img src="/static/fossitokdemo/pic/tours/8.jpg" data-at2x="/static/fossitokdemo/pic/tours/8.jpg" alt>
                 <div class="features-info-top">
                   <div class="info-price font-4"><span>start per night</span> $115</div>
                   <div class="info-temp font-4"><span>local temperature</span> 22° / 71.6°</div>
@@ -292,7 +439,7 @@
       </section>
       <!-- ! counter section-->
       <!-- page section parallax-->
-      <section class="small-section cws_prlx_section bg-gray-40"><img src="pic/parallax-1.jpg" alt class="cws_prlx_layer">
+      <section class="small-section cws_prlx_section bg-gray-40"><img src="/static/fossitokdemo/pic/parallax-1.jpg" alt class="cws_prlx_layer">
         <div class="container">
           <div class="row">
             <div class="col-md-5">
@@ -328,7 +475,7 @@
             <div class="col-md-6">
               <div class="recom-item">
                 <div class="recom-media"><a href="hotels-details.html">
-                    <div class="pic"><img src="pic/recomended/1.jpg" data-at2x="pic/recomended/1.jpg" alt></div></a>
+                    <div class="pic"><img src="/static/fossitokdemo/pic/recomended/1.jpg" data-at2x="/static/fossitokdemo/pic/recomended/1.jpg" alt></div></a>
                   <div class="location"><i class="flaticon-suntour-map"></i> Istanbul, Turkey</div>
                 </div>
                 <!-- Recomended Content-->
@@ -347,7 +494,7 @@
             <div class="col-md-6">
               <div class="recom-item">
                 <div class="recom-media"><a href="hotels-details.html">
-                    <div class="pic"><img src="pic/recomended/2.jpg" data-at2x="pic/recomended/2.jpg" alt></div></a>
+                    <div class="pic"><img src="/static/fossitokdemo/pic/recomended/2.jpg" data-at2x="/static/fossitokdemo/pic/recomended/2.jpg" alt></div></a>
                   <div class="location"><i class="flaticon-suntour-map"></i> Praga, Czech Republic</div>
                 </div>
                 <!-- Recomended Content-->
@@ -365,7 +512,7 @@
             <div class="col-md-6">
               <div class="recom-item">
                 <div class="recom-media"><a href="hotels-details.html">
-                    <div class="pic"><img src="pic/recomended/3.jpg" data-at2x="pic/recomended/3.jpg" alt></div></a>
+                    <div class="pic"><img src="/static/fossitokdemo/pic/recomended/3.jpg" data-at2x="/static/fossitokdemo/pic/recomended/3.jpg" alt></div></a>
                   <div class="location"><i class="flaticon-suntour-map"></i> Isle of Colonsay, United...</div>
                 </div>
                 <!-- Recomended Content-->
@@ -383,7 +530,7 @@
             <div class="col-md-6">
               <div class="recom-item">
                 <div class="recom-media"><a href="hotels-details.html">
-                    <div class="pic"><img src="pic/recomended/4.jpg" data-at2x="pic/recomended/4.jpg" alt></div></a>
+                    <div class="pic"><img src="/static/fossitokdemo/pic/recomended/4.jpg" data-at2x="/static/fossitokdemo/pic/recomended/4.jpg" alt></div></a>
                   <div class="location"><i class="flaticon-suntour-map"></i> St. Petersburg, Russia</div>
                 </div>
                 <!-- Recomended Content-->
@@ -401,7 +548,7 @@
             <div class="col-md-6">
               <div class="recom-item">
                 <div class="recom-media"><a href="hotels-details.html">
-                    <div class="pic"><img src="pic/recomended/5.jpg" data-at2x="pic/recomended/5.jpg" alt></div></a>
+                    <div class="pic"><img src="/static/fossitokdemo/pic/recomended/5.jpg" data-at2x="/static/fossitokdemo/pic/recomended/5.jpg" alt></div></a>
                   <div class="location"><i class="flaticon-suntour-map"></i> Vienna, Austria</div>
                 </div>
                 <!-- Recomended Content-->
@@ -419,7 +566,7 @@
             <div class="col-md-6">
               <div class="recom-item">
                 <div class="recom-media"><a href="hotels-details.html">
-                    <div class="pic"><img src="pic/recomended/6.jpg" data-at2x="pic/recomended/6.jpg" alt></div></a>
+                    <div class="pic"><img src="/static/fossitokdemo/pic/recomended/6.jpg" data-at2x="/static/fossitokdemo/pic/recomended/6.jpg" alt></div></a>
                   <div class="location"><i class="flaticon-suntour-map"></i> Kraków, Poland</div>
                 </div>
                 <!-- Recomended Content-->
@@ -438,7 +585,7 @@
       </section>
       <!-- ! recomended section-->
       <!-- testimonials section-->
-      <section class="small-section cws_prlx_section bg-blue-40"><img src="pic/parallax-2.jpg" alt class="cws_prlx_layer">
+      <section class="small-section cws_prlx_section bg-blue-40"><img src="/static/fossitokdemo/pic/parallax-2.jpg" alt class="cws_prlx_layer">
         <div class="container">
           <div class="row">
             <div class="col-md-8">
@@ -453,8 +600,8 @@
               <!-- testimonial item-->
               <div class="testimonial-item">
                 <div class="testimonial-top"><a href="hotels-details.html">
-                    <div class="pic"><img src="pic/testimonial/top-bg/1.jpg" data-at2x="pic/testimonial/top-bg/1.jpg" alt></div></a>
-                  <div class="author"> <img src="pic/testimonial/author/1.jpg" data-at2x="pic/testimonial/author/1.jpg" alt></div>
+                    <div class="pic"><img src="/static/fossitokdemo/pic/testimonial/top-bg/1.jpg" data-at2x="/static/fossitokdemo/pic/testimonial/top-bg/1.jpg" alt></div></a>
+                  <div class="author"> <img src="/static/fossitokdemo/pic/testimonial/author/1.jpg" data-at2x="/static/fossitokdemo/pic/testimonial/author/1.jpg" alt></div>
                 </div>
                 <!-- testimonial content-->
                 <div class="testimonial-body">
@@ -466,8 +613,8 @@
               <!-- testimonial item-->
               <div class="testimonial-item">
                 <div class="testimonial-top"><a href="hotels-details.html">
-                    <div class="pic"><img src="pic/testimonial/top-bg/2.jpg" data-at2x="pic/testimonial/top-bg/2.jpg" alt></div></a>
-                  <div class="author"> <img src="pic/testimonial/author/2.jpg" data-at2x="pic/testimonial/author/2.jpg" alt></div>
+                    <div class="pic"><img src="/static/fossitokdemo/pic/testimonial/top-bg/2.jpg" data-at2x="/static/fossitokdemo/pic/testimonial/top-bg/2.jpg" alt></div></a>
+                  <div class="author"> <img src="/static/fossitokdemo/pic/testimonial/author/2.jpg" data-at2x="/static/fossitokdemo/pic/testimonial/author/2.jpg" alt></div>
                 </div>
                 <!-- testimonial content-->
                 <div class="testimonial-body">
@@ -479,8 +626,8 @@
               <!-- testimonial item-->
               <div class="testimonial-item">
                 <div class="testimonial-top"><a href="hotels-details.html">
-                    <div class="pic"><img src="pic/testimonial/top-bg/3.jpg" data-at2x="pic/testimonial/top-bg/3.jpg" alt></div></a>
-                  <div class="author"> <img src="pic/testimonial/author/3.jpg" data-at2x="pic/testimonial/author/3.jpg" alt></div>
+                    <div class="pic"><img src="/static/fossitokdemo/pic/testimonial/top-bg/3.jpg" data-at2x="/static/fossitokdemo/pic/testimonial/top-bg/3.jpg" alt></div></a>
+                  <div class="author"> <img src="/static/fossitokdemo/pic/testimonial/author/3.jpg" data-at2x="/static/fossitokdemo/pic/testimonial/author/3.jpg" alt></div>
                 </div>
                 <!-- testimonial content-->
                 <div class="testimonial-body">
@@ -492,8 +639,8 @@
               <!-- testimonial item-->
               <div class="testimonial-item">
                 <div class="testimonial-top"><a href="hotels-details.html">
-                    <div class="pic"><img src="pic/testimonial/top-bg/1.jpg" data-at2x="pic/testimonial/top-bg/1.jpg" alt></div></a>
-                  <div class="author"> <img src="pic/testimonial/author/1.jpg" data-at2x="pic/testimonial/author/1.jpg" alt></div>
+                    <div class="pic"><img src="/static/fossitokdemo/pic/testimonial/top-bg/1.jpg" data-at2x="/static/fossitokdemo/pic/testimonial/top-bg/1.jpg" alt></div></a>
+                  <div class="author"> <img src="/static/fossitokdemo/pic/testimonial/author/1.jpg" data-at2x="/static/fossitokdemo/pic/testimonial/author/1.jpg" alt></div>
                 </div>
                 <!-- testimonial content-->
                 <div class="testimonial-body">
@@ -524,7 +671,7 @@
             <div class="col-md-6 col-sm-12 col-xs-12">
               <div class="portfolio-item big">
                 <!-- portfolio image--><a href="pic/portfolio/580x285-1%402x.jpg" class="fancy">
-                  <div class="portfolio-media"><img src="pic/portfolio/580x285-1.jpg" data-at2x="pic/portfolio/580x285-1.jpg" alt></div></a>
+                  <div class="portfolio-media"><img src="/static/fossitokdemo/pic/portfolio/580x285-1.jpg" data-at2x="/static/fossitokdemo/pic/portfolio/580x285-1.jpg" alt></div></a>
                 <div class="links"><a href="pic/portfolio/580x285-1%402x.jpg" class="fancy"><i class="fa fa-expand"></i></a></div>
               </div>
             </div>
@@ -532,7 +679,7 @@
             <div class="col-md-3 col-sm-6 col-xs-6">
               <div class="portfolio-item">
                 <!-- portfolio image--><a href="pic/portfolio/285x285-1%402x.jpg" class="fancy">
-                  <div class="portfolio-media"><img src="pic/portfolio/285x285-1.jpg" data-at2x="pic/portfolio/285x285-1.jpg" alt></div></a>
+                  <div class="portfolio-media"><img src="/static/fossitokdemo/pic/portfolio/285x285-1.jpg" data-at2x="/static/fossitokdemo/pic/portfolio/285x285-1.jpg" alt></div></a>
                 <div class="links"><a href="pic/portfolio/285x285-1%402x.jpg" class="fancy"><i class="fa fa-expand"></i></a></div>
               </div>
             </div>
@@ -540,7 +687,7 @@
             <div class="col-md-3 col-sm-6 col-xs-6">
               <div class="portfolio-item">
                 <!-- portfolio image--><a href="pic/portfolio/285x285-2%402x.jpg" class="fancy">
-                  <div class="portfolio-media"><img src="pic/portfolio/285x285-2.jpg" data-at2x="pic/portfolio/285x285-2.jpg" alt></div></a>
+                  <div class="portfolio-media"><img src="/static/fossitokdemo/pic/portfolio/285x285-2.jpg" data-at2x="/static/fossitokdemo/pic/portfolio/285x285-2.jpg" alt></div></a>
                 <div class="links"><a href="pic/portfolio/285x285-2%402x.jpg" class="fancy"><i class="fa fa-expand"></i></a></div>
               </div>
             </div>
@@ -548,7 +695,7 @@
             <div class="col-md-3 col-sm-6 col-xs-6">
               <div class="portfolio-item">
                 <!-- portfolio image--><a href="pic/portfolio/285x285-3%402x.jpg" class="fancy">
-                  <div class="portfolio-media"><img src="pic/portfolio/285x285-3.jpg" data-at2x="pic/portfolio/285x285-3.jpg" alt></div></a>
+                  <div class="portfolio-media"><img src="/static/fossitokdemo/pic/portfolio/285x285-3.jpg" data-at2x="/static/fossitokdemo/pic/portfolio/285x285-3.jpg" alt></div></a>
                 <div class="links"><a href="pic/portfolio/285x285-3%402x.jpg" class="fancy"><i class="fa fa-expand"></i></a></div>
               </div>
             </div>
@@ -556,7 +703,7 @@
             <div class="col-md-3 col-sm-6 col-xs-6">
               <div class="portfolio-item">
                 <!-- portfolio image--><a href="pic/portfolio/285x285-4%402x.jpg" class="fancy">
-                  <div class="portfolio-media"><img src="pic/portfolio/285x285-4.jpg" data-at2x="pic/portfolio/285x285-4.jpg" alt></div></a>
+                  <div class="portfolio-media"><img src="/static/fossitokdemo/pic/portfolio/285x285-4.jpg" data-at2x="/static/fossitokdemo/pic/portfolio/285x285-4.jpg" alt></div></a>
                 <div class="links"><a href="pic/portfolio/285x285-4%402x.jpg" class="fancy"><i class="fa fa-expand"></i></a></div>
               </div>
             </div>
@@ -564,7 +711,7 @@
             <div class="col-md-3 col-sm-6 col-xs-6">
               <div class="portfolio-item">
                 <!-- portfolio image--><a href="pic/portfolio/285x285-5%402x.jpg" class="fancy">
-                  <div class="portfolio-media"><img src="pic/portfolio/285x285-5.jpg" data-at2x="pic/portfolio/285x285-5.jpg" alt></div></a>
+                  <div class="portfolio-media"><img src="/static/fossitokdemo/pic/portfolio/285x285-5.jpg" data-at2x="/static/fossitokdemo/pic/portfolio/285x285-5.jpg" alt></div></a>
                 <div class="links"><a href="pic/portfolio/285x285-5%402x.jpg" class="fancy"><i class="fa fa-expand"></i></a></div>
               </div>
             </div>
@@ -572,7 +719,7 @@
             <div class="col-md-3 col-sm-6 col-xs-6">
               <div class="portfolio-item">
                 <!-- portfolio image--><a href="pic/portfolio/285x285-6%402x.jpg" class="fancy">
-                  <div class="portfolio-media"><img src="pic/portfolio/285x285-6.jpg" data-at2x="pic/portfolio/285x285-6.jpg" alt></div></a>
+                  <div class="portfolio-media"><img src="/static/fossitokdemo/pic/portfolio/285x285-6.jpg" data-at2x="/static/fossitokdemo/pic/portfolio/285x285-6.jpg" alt></div></a>
                 <div class="links"><a href="pic/portfolio/285x285-6%402x.jpg" class="fancy"><i class="fa fa-expand"></i></a></div>
               </div>
             </div>
@@ -580,7 +727,7 @@
             <div class="col-md-3 col-sm-6 col-xs-6">
               <div class="portfolio-item">
                 <!-- portfolio image--><a href="pic/portfolio/285x285-7%402x.jpg" class="fancy">
-                  <div class="portfolio-media"><img src="pic/portfolio/285x285-7.jpg" data-at2x="pic/portfolio/285x285-7.jpg" alt></div></a>
+                  <div class="portfolio-media"><img src="/static/fossitokdemo/pic/portfolio/285x285-7.jpg" data-at2x="/static/fossitokdemo/pic/portfolio/285x285-7.jpg" alt></div></a>
                 <div class="links"><a href="pic/portfolio/285x285-7%402x.jpg" class="fancy"><i class="fa fa-expand"></i></a></div>
               </div>
             </div>
@@ -588,7 +735,7 @@
             <div class="col-md-3 col-sm-6 col-xs-6">
               <div class="portfolio-item">
                 <!-- portfolio image--><a href="pic/portfolio/285x285-8%402x.jpg" class="fancy">
-                  <div class="portfolio-media"><img src="pic/portfolio/285x285-8.jpg" data-at2x="pic/portfolio/285x285-8.jpg" alt></div></a>
+                  <div class="portfolio-media"><img src="/static/fossitokdemo/pic/portfolio/285x285-8.jpg" data-at2x="/static/fossitokdemo/pic/portfolio/285x285-8.jpg" alt></div></a>
                 <div class="links"><a href="pic/portfolio/285x285-8%402x.jpg" class="fancy"><i class="fa fa-expand"></i></a></div>
               </div>
             </div>
@@ -596,7 +743,7 @@
             <div class="col-md-6 col-sm-12 col-xs-12">
               <div class="portfolio-item big">
                 <!-- portfolio image--><a href="pic/portfolio/580x285-2%402x.jpg" class="fancy">
-                  <div class="portfolio-media"><img src="pic/portfolio/580x285-2.jpg" data-at2x="pic/portfolio/580x285-2.jpg" alt></div></a>
+                  <div class="portfolio-media"><img src="/static/fossitokdemo/pic/portfolio/580x285-2.jpg" data-at2x="/static/fossitokdemo/pic/portfolio/580x285-2.jpg" alt></div></a>
                 <div class="links"><a href="pic/portfolio/580x285-2%402x.jpg" class="fancy"><i class="fa fa-expand"></i></a></div>
               </div>
             </div>
@@ -605,7 +752,7 @@
       </section>
       <!-- ! gallery section-->
       <!-- latest news-->
-      <section class="small-section cws_prlx_section bg-blue-40"><img src="pic/parallax-3.jpg" alt class="cws_prlx_layer">
+      <section class="small-section cws_prlx_section bg-blue-40"><img src="/static/fossitokdemo/pic/parallax-3.jpg" alt class="cws_prlx_layer">
         <div class="container">
           <div class="row mb-50">
             <div class="col-md-8">
@@ -623,7 +770,7 @@
                 <div class="blog-item clearfix">
                   <!-- Blog Image-->
                   <div class="blog-media"><a href="blog-single.html">
-                      <div class="pic"><img src="pic/blog/270x270/1.jpg" data-at2x="pic/blog/270x270/1.jpg" alt></div></a></div>
+                      <div class="pic"><img src="/static/fossitokdemo/pic/blog/270x270/1.jpg" data-at2x="/static/fossitokdemo/pic/blog/270x270/1.jpg" alt></div></a></div>
                   <!-- blog body-->
                   <div class="blog-item-body clearfix">
                     <!-- title--><a href="blog-single.html">
@@ -638,7 +785,7 @@
                 <div class="blog-item clearfix">
                   <!-- Blog Image-->
                   <div class="blog-media"><a href="blog-single.html">
-                      <div class="pic"><img src="pic/blog/270x270/2.jpg" data-at2x="pic/blog/270x270/2.jpg" alt></div></a></div>
+                      <div class="pic"><img src="/static/fossitokdemo/pic/blog/270x270/2.jpg" data-at2x="/static/fossitokdemo/pic/blog/270x270/2.jpg" alt></div></a></div>
                   <!-- blog body-->
                   <div class="blog-item-body clearfix">
                     <!-- title--><a href="blog-single.html">
@@ -653,7 +800,7 @@
                 <div class="blog-item clearfix">
                   <!-- Blog Image-->
                   <div class="blog-media"><a href="blog-single.html">
-                      <div class="pic"><img src="pic/blog/270x270/3.jpg" data-at2x="pic/blog/270x270/3.jpg" alt></div></a></div>
+                      <div class="pic"><img src="/static/fossitokdemo/pic/blog/270x270/3.jpg" data-at2x="/static/fossitokdemo/pic/blog/270x270/3.jpg" alt></div></a></div>
                   <!-- blog body-->
                   <div class="blog-item-body clearfix">
                     <!-- title--><a href="blog-single.html">
@@ -693,11 +840,14 @@
       </section>
       <!-- ! call out section-->
     </div>
+
+
     <!-- footer-->
-    <footer-directive></footer-directive>
 
     <div id="scroll-top"><i class="fa fa-angle-up"></i></div>
     <!-- ! footer-->
+
+
     <!-- login popup-->
     <div class="login-popup">
       <div class="login-popup-wrap">
@@ -722,11 +872,13 @@
       </div>
     </div>
     <!-- ! login popup-->
+
+
     <!-- news popup-->
     <div class="news-popup"> 
       <div class="news-popup-wrap"> <i class="close-button flaticon-close"></i>
         <div class="row">
-          <div class="col-sm-6"><img src="pic/news-popup.jpg" data-at2x="pic/news-popup.jpg" alt></div>
+          <div class="col-sm-6"><img src="/static/fossitokdemo/pic/news-popup.jpg" data-at2x="/static/fossitokdemo/pic/news-popup.jpg" alt></div>
           <div class="col-sm-6">
             <div class="news-content">
               <div class="news-title">
@@ -753,41 +905,7 @@
     </div>
     <!-- ! news popup-->
     
-    <script data-cfasync="false" src="http://html.creaws.com/cdn-cgi/scripts/d07b1474/cloudflare-static/email-decode.min.js"></script><script src="https://www.youtube.com/player_api"></script>
-    <script type="text/javascript" src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
-    <script type="text/javascript" src="js/bootstrap.js"></script>
-    <script type="text/javascript" src="js/owl.carousel.js"></script>
-    <script type="text/javascript" src="js/jquery.sticky.js"></script>
-    <script type="text/javascript" src="js/TweenMax.min.js"></script>
-    <script type="text/javascript" src="js/cws_parallax.js"></script>
-    <script type="text/javascript" src="js/jquery.fancybox.pack.js"></script>
-    <script type="text/javascript" src="js/jquery.fancybox-media.js"></script>
-    <script type="text/javascript" src="js/isotope.pkgd.min.js"></script>
-    <script type="text/javascript" src="js/imagesloaded.pkgd.min.js"></script>
-    <script type="text/javascript" src="js/masonry.pkgd.min.js"></script>
-    <script type="text/javascript" src="rs-plugin/js/jquery.themepunch.tools.min.js"></script>
-    <script type="text/javascript" src="rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
-    <script type="text/javascript" src="rs-plugin/js/extensions/revolution.extension.slideanims.min.js"></script>
-    <script type="text/javascript" src="rs-plugin/js/extensions/revolution.extension.layeranimation.min.js"></script>
-    <script type="text/javascript" src="rs-plugin/js/extensions/revolution.extension.navigation.min.js"></script>
-    <script type="text/javascript" src="rs-plugin/js/extensions/revolution.extension.parallax.min.js"></script>
-    <script type="text/javascript" src="rs-plugin/js/extensions/revolution.extension.video.min.js"></script>
-    <script type="text/javascript" src="rs-plugin/js/extensions/revolution.extension.actions.min.js"></script>
-    <script type="text/javascript" src="rs-plugin/js/extensions/revolution.extension.kenburn.min.js"></script>
-    <script type="text/javascript" src="rs-plugin/js/extensions/revolution.extension.migration.min.js"></script>
-    <script type="text/javascript" src="js/jquery.validate.min.js"></script>
-    <script type="text/javascript" src="js/jquery.form.min.js"></script>
-    <script type="text/javascript" src="js/script.js"></script>
-    <script type="text/javascript" src="js/bg-video/cws_self_vimeo_bg.js"></script>
-    <script type="text/javascript" src="js/bg-video/jquery.vimeo.api.min.js"></script>
-    <script type="text/javascript" src="js/bg-video/cws_YT_bg.js"></script>
-    <script type="text/javascript" src="js/jquery.tweet.js"></script>
-    <script type="text/javascript" src="js/jquery.scrollTo.min.js"></script>
-    <script type="text/javascript" src="js/jquery.flexslider.js"></script>
-    <script type="text/javascript" src="tuner/js/colorpicker.js"></script>
-    <script type="text/javascript" src="tuner/js/scripts.js"></script>
-    <script type="text/javascript" src="js/retina.min.js"></script>
+    {% include 'blocks/javascript_refrences.html' %}
   </body>
 
 <!-- Mirrored from html.creaws.com/suntour/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 26 Mar 2018 18:47:04 GMT -->
